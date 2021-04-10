@@ -80,20 +80,6 @@ chmod +x scripts/e2e-ci.sh
 ###### This project is licensed under the MIT Open Source License
 
 
-ASSIGNMENT 1
-
-
-Analysis of the problem (What are we trying to solve?) (5%)
-
-Since the lead developer (Pete) is on sick leave this has resulted in updated builds not being pushed out. As he has been deploying it manually from his computer, no one else has access to the code. In addition as he is manually building and deploying, he is prone to mistakes or differences between builds causing errors and bugs. 
-
-
-Explain and Justify the solution (How does the solution work) (10%)
-
-We are attempting to fix this by introducing automated builds and automated testing so that we don't have to rely on Pete. Hence this would make it easier for the support and development teams reducing their workload.
-
-
-
 
 
 
