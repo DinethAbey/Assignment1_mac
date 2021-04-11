@@ -17,10 +17,8 @@ jobs:
            command: |
              nodejsscan -d ./
 
-
-
 workflows:
   build-and-package:
     jobs:
-      - codeanaly:
+      - sast:
           
