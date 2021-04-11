@@ -1,7 +1,5 @@
 version: 2.1
-
-jobs:
-  sast:
+sast:
     docker:
       - image: circleci/node:lts
     steps:
@@ -16,9 +14,8 @@ jobs:
            name: run NodeJsScan
            command: |
              nodejsscan -d ./
-
 workflows:
   build-and-package:
     jobs:
-      - sast:
+      - sast
           
