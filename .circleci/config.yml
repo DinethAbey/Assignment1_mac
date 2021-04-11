@@ -1,5 +1,6 @@
 version: 2.1
-sast:
+jobs:
+  sast:
     docker:
       - image: circleci/node:lts
     steps:
