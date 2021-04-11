@@ -1,9 +1,11 @@
 version: 2.1
 
 jobs:
-  ci-build:
+  intergration-tests:
     docker:
       - image: circleci/node:lts
+    environment: 
+      APP_PORT: 4000
     steps:
       - checkout
 
