@@ -1,17 +1,29 @@
 version: 2.1
 
+commands:
+  install_deps:
+    steps:
+      - run:
+          name: Install dependencies
+          command: |
+            npm install
+
 jobs:
-  ci-build:
+  test_unit:
     docker:
       - image: circleci/node:lts
+    environmnent:
+      JEST_JUNIT_OUTPUT_DIR: test_output  
     steps:
-      - checkout
+      - checkout 
+      - install_deps
       - run:
-         name: install dependencies
-         command: |
-             yarn --frozen-lockfile
+          name: run tests
+          command: |
+            npm run test-unit
+
 
 workflows:
-  build-and-packge:
+  build-and-package:
     jobs:
-      - ci-build
+      - test_unit
