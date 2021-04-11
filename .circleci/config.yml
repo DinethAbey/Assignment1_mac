@@ -12,4 +12,4 @@ jobs:
 workflows:
   build-and-packge:
     jobs:
-      - ci-build
+      - intergration-tests
