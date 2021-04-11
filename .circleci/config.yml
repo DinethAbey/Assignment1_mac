@@ -6,7 +6,7 @@ commands:
       - run:
           name: Install dependencies
           command: |
-            npm install
+              npm install
 
 jobs:
   test_unit:
@@ -20,8 +20,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            npm run test-unit
-
+              npm run test-unit
 
 workflows:
   build-and-package:
