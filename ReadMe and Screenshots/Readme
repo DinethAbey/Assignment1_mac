@@ -1,0 +1,15 @@
+DINETH ABEYSINGHE (S3783473)
+
+
+ASSIGNMENT 1
+
+
+Analysis of the problem (What are we trying to solve?) (5%)
+
+The main problem is that all the updates are being manually built and pushed through from the lead developers (Pete) laptop whilst the main source code is stored on GitHub. And since Pete is on sick leave, none of the other employees have access to his code. Hence, Stonks.Inc will miss crucial updates. In addition, they have also found more bugs in the releases causing more stress on the support and development teams. These bugs could be caused by Pete manually pushing updates which could be changing. 
+
+
+
+Explain and Justify the solution (How does the solution work) (10%)
+
+We are attempting to fix this by introducing automated builds and automated testing so that we don't have to rely on Pete manually building and pushing updates. We aim to do this by integrating a CI pipeline using CircleCi to be able to start automated testing and building. By doing this, it means that the build environment and tests will not change. Hence, resulting in less bugs caused by Pete manually pushing updates from his computer. Therefore, it would make it easier for the support and development teams, reducing their workload.
