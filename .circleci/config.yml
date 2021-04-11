@@ -1,13 +1,26 @@
 version: 2.1
 
 jobs:
-  ci-build:
+  sast:
     docker:
       - image: circleci/node:lts
     steps:
       - checkout
+      - run:
+          name: Install NodeJsScan
+          command: |
+            sudo apt update
+            sudo apt install python3-pip
+            pip3 install nodejsscan
+      - run: 
+           name: run NodeJsScan
+           command: |
+             nodejsscan -d ./
+
+
 
 workflows:
-  build-and-packge:
+  build-and-package:
     jobs:
-      - ci-build
+      - codeanaly:
+          
