@@ -6,6 +6,10 @@ jobs:
       - image: circleci/node:lts
     steps:
       - checkout
+      - run:
+         name: install dependencies
+         command: |
+             yarn --frozen-lockfile
 
 workflows:
   build-and-packge:
