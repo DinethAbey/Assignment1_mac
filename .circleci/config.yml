@@ -12,15 +12,16 @@ jobs:
   test_unit:
     docker:
       - image: circleci/node:lts
-    environmnent:
-      JEST_JUNIT_OUTPUT_DIR: test_output  
+    environment:
+      JEST_JUNIT_OUTPUT_DIR: test-output
     steps:
       - checkout 
       - install_deps
       - run:
           name: run tests
           command: |
-            npm run test-unit
+            npm run --prefix src/test-unit
+
 
 workflows:
   build-and-package:
